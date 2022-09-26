@@ -12,9 +12,16 @@ const stuff = [
 ]
 
 // objekt car
-const car = ["bmw","xqc","1984"]
+const car = {
+    brand: "bmw",
+    model: "sedan",
+    year: 1984
+}
 // destructure car
-const [brand,model,year] = car
+const {
+    brand, model, year
+} = car
+//const [brand,model,year] = car
 
 // random mezi 0 a 555 jesus take the wheel
 let jttw = Math.floor(Math.random() * 556)
@@ -30,14 +37,9 @@ stuff.sort().forEach(listAll)
 console.log("")
 
 // listuje objekt car
-carList(car)
+console.log(brand + ", " + model + ", " + year)
 
 // funkce na listovani stuff
 function listAll(item) {
     console.log(item)
-}
-
-// funkce na listovani destrukturovanyho car
-function carList(item) {
-    console.log(brand + ", " + model + ", " + year)
 }
